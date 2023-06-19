@@ -24,7 +24,7 @@ export class HomePage implements OnInit {
     this.params.page = 0;
     this.getCharacters();
   }
-
+  //======= Obtener personajes ==========
   getCharacters(event?: any){
     this.params.page+=1;
 
@@ -32,9 +32,27 @@ export class HomePage implements OnInit {
       next: (res: any)=>{
         this.characters.push(...res.results)
         console.log(this.characters);
+
+        if(event) event.target.complete();
       },
       error:(error: any) => {
+        if(event) event.target.complete();  
+      }
+    })
+  }
 
+  searchCharacters(){
+    this.params.page=1;
+
+    this.rickAndMortySvc.getCharacters(this.params).subscribe({
+      next: (res: any)=>{
+        this.characters = res.results
+       
+
+        
+      },
+      error:(error: any) => {
+        
       }
     })
   }
