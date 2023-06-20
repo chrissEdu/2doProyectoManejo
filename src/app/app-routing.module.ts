@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'character-detail/:id', //agregamos un parametro a la ruta del caracter detail
+    path: 'character-detail/:id',
     loadChildren: () => import('./pages/character-detail/character-detail.module').then( m => m.CharacterDetailPageModule)
   },
   {
