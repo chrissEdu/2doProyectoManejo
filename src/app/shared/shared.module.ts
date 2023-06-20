@@ -7,9 +7,13 @@ import { RickAndMortyService } from '../services/rick-and-morty.service';
 
 @NgModule({
   declarations: [],
+  export: [
+    RouterModule
+  ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers:[RickAndMortyService]
 })
