@@ -8,7 +8,10 @@
 
 <ion-content mod = "ios">
   <div class="glass-content ion-padding">
-    <div class="ion-text-center ion-padding-top">
+    <div class="ion-text-center ion-padding-top" *ngIf="character">
+      <ion-avatar>
+        <img [scr]="character.image"/>
+      </ion-avatar>
     </div>  
   </div>  
 </ion-content>
