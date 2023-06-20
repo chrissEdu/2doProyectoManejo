@@ -28,4 +28,19 @@ export class CharacterDetailPage implements OnInit {
   ngOnInit() {
   }
 
+  //crear funcion para obtener el personaje
+  ionViewWillEnter(){
+    this.getCharacters()
+  }
+  getCharacters(){
+
+    this.rickAndMortySvc.getCharacterById(this.characterId).subscribe({
+      next: (res: any)=>{
+        console.log(res);
+      },
+      error:(error: any) => {
+
+      }
+    })
+  }
 }
