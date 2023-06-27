@@ -1,7 +1,30 @@
-.version{
-    font-size: 14px;
+.animated-word{
+    font-size: 18px;
+    display:flex;
+    align-items: center;
 }
 
+.letter{
+    transition: 0.4s;
+    transform: translate(0);
+    cursor: grab;
+    color: #fff;
+}
+.letter:hover{
+
+    transform: translatey(-1rem);
+    background: -webkit-linear-gradient(120deg,hsl(19,90%,52%),hsl(56,100%,50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.serch-box:hover .serch-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+.serch-box:hover .serch-btn{
+    background: #fff;
+}
 ion-avatar {
     --border-radius: 10px;
     width: 100%;
@@ -13,7 +36,7 @@ ion-avatar {
     font-weight: bold;
 }
 
-ion-searchbar {
+ion-searchbar  {
     --background: rgba(30,30,30,1);
     max-width: 450px;
     color: lightslategrey;
@@ -22,4 +45,5 @@ ion-searchbar {
 ion-card:hover {
     cursor: pointer;
     background: rgba(30,30,30,1);
+    transform: scale(1.1);
 }
