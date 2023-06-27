@@ -1,8 +1,18 @@
 <ion-header mode="md">
   <ion-toolbar>
     <ion-title>
-      <div class="version">Ionic v7</div>
-      <strong>Rick & Morty</strong>
+      <div class="animated-word">
+      <div class="letter">R</div>
+      <div class="letter">i</div>
+      <div class="letter">c</div>
+      <div class="letter">k</div>
+      <div class="letter">&</div>
+      <div class="letter">M</div>
+      <div class="letter">o</div>
+      <div class="letter">r</div>
+      <div class="letter">t</div>
+      <div class="letter">y</div>
+    </div>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,7 +23,7 @@
 
       <ion-row>
         <ion-col class="d-flex-center" size="12">
-          <ion-searchbar placeholder="A que personaje buscas..." [(ngModel)]="params.name"
+          <ion-searchbar  placeholder="A que personaje buscas..." [(ngModel)]="params.name"
             (ionInput)="searchCharacters()" [debounce]="250"></ion-searchbar>
         </ion-col>
       </ion-row>

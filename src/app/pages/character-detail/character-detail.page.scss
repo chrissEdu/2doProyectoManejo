@@ -5,4 +5,25 @@ ion-avatar{
     max-height: 200px;
     margin: 0 auto;
     --border-radius: 20px;
+    
+}
+ion-avatar:hover {
+    cursor: pointer;
+    transform: scale(1.2) ;
+}
+
+ion-card:hover {
+    cursor: pointer;
+    background: rgba(30,30,30,1);
+    transform: scale(1.2);
+}
+
+ion-label:hover {
+    cursor: pointer;
+    transform: translate(1px , 2px) scale(0.9);
+}
+
+ion-icon:hover {
+    cursor: pointer;
+    transform: scale(1.6);
 }
